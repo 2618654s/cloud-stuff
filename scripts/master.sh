@@ -32,7 +32,7 @@ command_exists() {
 run_benchmark() {
     local script_name=$1
     local tool_name=$2
-    
+
     if [ -f "$script_name" ]; then
         echo -e "${GREEN}[RUN]${NC} Starting $tool_name benchmark..."
         bash "$script_name"
@@ -68,13 +68,13 @@ echo ""
 
 run_benchmark "/home/samsaju/cloud-stuff/scripts/stress_ng.sh" "Stress-NG (System Stress)"
 # run_benchmark "sysbench.sh" "Sysbench (CPU/Memory/Disk)"
-run_benchmark "/home/samsaju/cloud-stuff/scripts/wrk.sh" "WRK (HTTP Load Testing)"
+
 run_benchmark "/home/samsaju/cloud-stuff/scripts/qperf.sh" "QPERF (Network Performance)"
 run_benchmark "/home/samsaju/cloud-stuff/scripts/speedtest.sh" "Speedtest (Internet Speed)"
 run_benchmark "/home/samsaju/cloud-stuff/scripts/network.sh" "Network Tests (Ping/iPerf)"
 # run_benchmark "fio.sh" "FIO (Advanced Disk I/O)"
 run_benchmark "/home/samsaju/cloud-stuff/scripts/nginx.sh" "Nginx"
-run_benchmark "/home/samsaju/cloud-stuff/scripts/forksum_script.sh" "Nginx"
+run_benchmark "/home/samsaju/cloud-stuff/scripts/forksum_script.sh" "Forksum"
 
 echo "=========================================="
 echo "  Benchmark Suite Completed"
