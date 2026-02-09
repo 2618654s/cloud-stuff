@@ -54,3 +54,5 @@ Signed-By: /etc/apt/keyrings/docker.asc
 EOF
 
 sudo apt update
+
+mkdir /home/samsaju/benchmark_logs
