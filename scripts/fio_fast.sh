@@ -19,7 +19,7 @@ if ! command -v python3 &> /dev/null; then echo "Error: python3 missing"; exit 1
 
 # Create CSV Header
 if [ ! -f "$RESULT_CSV" ]; then
-    echo "Iteration,Test_Type,IOPS,BW_MiB_s,Lat_Mean_ms,Lat_Min_ms,Lat_Max_ms,Lat_StdDev_ms,Lat_p95_ms" > "$RESULT_CSV"
+    echo "Timestamp,Iteration,Test_Type,IOPS,BW_MiB_s,Lat_Mean_ms,Lat_Min_ms,Lat_Max_ms,Lat_StdDev_ms,Lat_p95_ms" > "$RESULT_CSV"
 fi
 
 echo "Starting Advanced FIO Benchmark..."
@@ -76,9 +76,11 @@ run_test() {
     local BS=$4
 
     echo "   Running $NAME (Iter $ITER)..."
+
+    # Get current UTC timestamp
+    local TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
     
     # Run FIO and pipe JSON output to Python parser
-    # Note: --output-format=json is critical here
     fio --name=$NAME \
         --ioengine=libaio --rw=$RW --bs=$BS \
         --direct=1 --size=$SIZE --numjobs=1 --runtime=$RUNTIME \
@@ -88,12 +90,13 @@ run_test() {
     # Parse the temp file
     CSV_DATA=$(cat temp_fio.json | parse_json)
     
-    # Save to file
-    echo "$ITER,$NAME,$CSV_DATA" >> "$RESULT_CSV"
+    # Save to file with timestamp
+    echo "$TIMESTAMP,$ITER,$NAME,$CSV_DATA" >> "$RESULT_CSV"
     
     rm -f $TEST_FILE temp_fio.json
     sleep 2
 }
+
 
 # ------------------------------------------------------------------------------
 # MAIN EXECUTION

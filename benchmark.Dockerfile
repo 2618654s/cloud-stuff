@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
     sysbench iperf3 fio iputils-ping qperf stress-ng \
     python3-pip python3-full build-essential libssl-dev \
-    git unzip curl sudo && rm -rf /var/lib/apt/lists/*
+    git unzip curl sudo jq && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install locust --break-system-packages
 
