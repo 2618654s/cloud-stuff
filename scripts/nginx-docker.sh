@@ -56,26 +56,26 @@ done
 for threads in "${THREAD_COUNTS[@]}"; do
     for connections in "${CONNECTION_COUNTS[@]}"; do
         echo "Config: T:$threads | C:$connections"
-        
+
         for iter in $(seq 1 $ITERATIONS); do
             TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
             WRK_OUTPUT=$($WRK_BIN -t$threads -c$connections -d$DURATION --latency "$TARGET_URL" 2>&1)
-            
+
             if [ $? -eq 0 ]; then
                 REQ_TOTAL=$(echo "$WRK_OUTPUT" | grep "requests in" | awk '{print $1}')
                 REQ_SEC=$(echo "$WRK_OUTPUT" | grep "Requests/sec:" | awk '{print $2}')
                 TRANS_SEC=$(echo "$WRK_OUTPUT" | grep "Transfer/sec:" | awk '{print $2}')
-                
+
                 TRANS_MB=$(convert_to_mb "$TRANS_SEC")
-                
+
                 L_AVG=$(echo "$WRK_OUTPUT" | grep "Latency" | head -1 | awk '{print $2}')
                 L_STD=$(echo "$WRK_OUTPUT" | grep "Latency" | head -1 | awk '{print $3}')
                 L_MAX=$(echo "$WRK_OUTPUT" | grep "Latency" | head -1 | awk '{print $4}')
-                
+
                 L_AVG_MS=$(convert_to_ms "$L_AVG")
                 L_STD_MS=$(convert_to_ms "$L_STD")
                 L_MAX_MS=$(convert_to_ms "$L_MAX")
-                
+
                 echo "$TIMESTAMP,$iter,$threads,$connections,$DURATION,$REQ_TOTAL,$REQ_SEC,$TRANS_MB,$L_AVG_MS,$L_STD_MS,$L_MAX_MS" >> "$LOG_FILE"
                 echo "  Iter $iter: $REQ_SEC req/s"
             else

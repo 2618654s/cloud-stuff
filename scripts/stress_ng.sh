@@ -5,8 +5,8 @@
 
 # --- CONFIGURATION ---
 # The script you created in the previous step
-BENCHMARK_SCRIPT="/home/samsaju/scripts/sysbench.sh"
-BENCHMARK_SCRIPT_2="/home/samsaju/scripts/fio_fast.sh"
+BENCHMARK_SCRIPT="/home/samsaju/cloud-stuff/scripts/sysbench.sh"
+BENCHMARK_SCRIPT_2="/home/samsaju/cloud-stuff/scripts/fio_fast.sh"
 LOG_DIR="$HOME/benchmark_logs"
 RESULT_FILE="$LOG_DIR/interference_comparison.txt"
 
@@ -18,8 +18,8 @@ echo "STARTING INTERFERENCE TEST SUITE - $(date)" | tee -a $RESULT_FILE
 echo "========================================================" | tee -a $RESULT_FILE
 
 run_all_benchmarks() {
-    echo "   -> Running $BENCHMARK_SCRIPT..." | tee -a $RESULT_FILE
-    $BENCHMARK_SCRIPT
+    # echo "   -> Running $BENCHMARK_SCRIPT..." | tee -a $RESULT_FILE
+    # $BENCHMARK_SCRIPT
     echo "   -> Running $BENCHMARK_SCRIPT_2..." | tee -a $RESULT_FILE
     $BENCHMARK_SCRIPT_2
 }

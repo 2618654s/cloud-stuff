@@ -50,21 +50,21 @@ run_test() {
 
 # --- CONFIG 1: BASELINE (Small Request) ---
 echo "Running Config 1: Baseline (Small Load)..."
-for i in {1..2}; do
+for i in {1..5}; do
     run_test "Baseline" 1 1000
 done
 echo " Done."
 
 # --- CONFIG 2: HEAVY LOAD (Complex Request) ---
 echo "Running Config 2: Heavy Load..."
-for i in {1..10}; do
+for i in {1..5}; do
     run_test "Heavy" 1 5000
 done
 echo " Done."
 
 # --- CONFIG 3: VERY HEAVY LOAD (Complex Request) ---
 echo "Running Config 3: Heavy Load..."
-for i in {1..10}; do
+for i in {1..5}; do
     run_test "Very Heavy" 1 10000
 done
 echo " Done."

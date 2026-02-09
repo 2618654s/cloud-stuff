@@ -31,7 +31,7 @@ log_result() {
     local free_ram=$6
     local result_value=$7
     local result_unit=$8
-    
+
     echo "$timestamp,$iteration,$bench_type,$param_config,$load_avg,$free_ram,$result_value,$result_unit" >> "$LOG_FILE"
 }
 
@@ -45,16 +45,16 @@ for max_prime in "${CPU_MAX_PRIMES[@]}"; do
 
         PARAM_CONFIG="prime=${max_prime}_threads=${threads}"
         echo "  → $PARAM_CONFIG"
-        
+
         for iter in $(seq 1 $ITERATIONS); do
             LOAD_AVG=$(cat /proc/loadavg | awk '{print $1}')
             FREE_RAM=$(free -m | grep Mem | awk '{print $7}')
-            
+
             CPU_RES=$($SYSBENCH_BIN cpu \
                 --cpu-max-prime=$max_prime \
                 --threads=$threads \
                 run 2>/dev/null | grep "events per second" | awk '{print $4}')
-            
+
             log_result "$TIMESTAMP" "$iter" "cpu" "$PARAM_CONFIG" "$LOAD_AVG" "$FREE_RAM" "$CPU_RES" "events/sec"
             sleep 2
         done
@@ -68,11 +68,11 @@ for block_size in "${MEM_BLOCK_SIZES[@]}"; do
         TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
         PARAM_CONFIG="blocksize=${block_size}_threads=${threads}"
         echo "  → $PARAM_CONFIG"
-        
+
         for iter in $(seq 1 $ITERATIONS); do
             LOAD_AVG=$(cat /proc/loadavg | awk '{print $1}')
             FREE_RAM=$(free -m | grep Mem | awk '{print $7}')
-            
+
             MEM_RES=$($SYSBENCH_BIN memory \
                 --memory-block-size=$block_size \
                 --memory-total-size=$MEM_TOTAL_SIZE \
@@ -80,7 +80,7 @@ for block_size in "${MEM_BLOCK_SIZES[@]}"; do
                 --time=$RUNTIME \
                 --max-requests=0 \
                 run 2>/dev/null | grep "MiB/sec" | awk '{print $4}' | tr -d '(')
-            
+
             log_result "$TIMESTAMP" "$iter" "memory" "$PARAM_CONFIG" "$LOAD_AVG" "$FREE_RAM" "$MEM_RES" "MiB/sec"
             sleep 2
         done
@@ -94,13 +94,13 @@ for file_size in "${DISK_FILE_SIZES[@]}"; do
         TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
         PARAM_CONFIG="filesize=${file_size}_threads=${threads}"
         echo "  → $PARAM_CONFIG"
-        
+
         for iter in $(seq 1 $ITERATIONS); do
             LOAD_AVG=$(cat /proc/loadavg | awk '{print $1}')
             FREE_RAM=$(free -m | grep Mem | awk '{print $7}')
-            
+
             $SYSBENCH_BIN fileio --file-total-size=$file_size --threads=$threads prepare > /dev/null 2>&1
-            
+
             DISK_OUTPUT=$($SYSBENCH_BIN fileio \
                 --file-total-size=$file_size \
                 --file-test-mode=rndrw \
@@ -108,13 +108,13 @@ for file_size in "${DISK_FILE_SIZES[@]}"; do
                 --time=$RUNTIME \
                 --max-requests=0 \
                 run 2>/dev/null)
-            
+
             DISK_READ=$(echo "$DISK_OUTPUT" | grep "read, MiB/s:" | awk '{print $3}')
             DISK_WRITE=$(echo "$DISK_OUTPUT" | grep "written, MiB/s:" | awk '{print $3}')
-            
+
             log_result "$TIMESTAMP" "$iter" "disk_read" "$PARAM_CONFIG" "$LOAD_AVG" "$FREE_RAM" "$DISK_READ" "MiB/sec"
             log_result "$TIMESTAMP" "$iter" "disk_write" "$PARAM_CONFIG" "$LOAD_AVG" "$FREE_RAM" "$DISK_WRITE" "MiB/sec"
-            
+
             $SYSBENCH_BIN fileio --file-total-size=$file_size --threads=$threads cleanup > /dev/null 2>&1
             sleep 2
         done

@@ -43,16 +43,16 @@ do
     # Parse JSON using jq
     # Note: Ookla provides bandwidth in bytes/sec. We multiply by 8 to get bits, then divide by 1,000,000 for Mbps.
     # We use -r for raw output to avoid extra quotes around strings
-    
+
     timestamp=$(echo "$json_output" | jq -r '.timestamp')
     server_name=$(echo "$json_output" | jq -r '.server.name // "N/A"')
     server_location=$(echo "$json_output" | jq -r '.server.location // "N/A"')
     ping=$(echo "$json_output" | jq -r '.ping.latency // 0')
-    
+
     # Calculate Mbps (Bytes * 8 / 1,000,000)
     download=$(echo "$json_output" | jq -r '(.download.bandwidth * 8 / 1000000) | . * 100 | floor / 100')
     upload=$(echo "$json_output" | jq -r '(.upload.bandwidth * 8 / 1000000) | . * 100 | floor / 100')
-    
+
     # Handle Packet Loss (often null if 0% loss, so we default to 0)
     packet_loss=$(echo "$json_output" | jq -r '.packetLoss // 0')
     isp=$(echo "$json_output" | jq -r '.isp // "Unknown"')
@@ -62,7 +62,7 @@ do
     echo "$timestamp,$i,\"$server_name\",\"$server_location\",$ping,$download,$upload,$packet_loss,\"$isp\"" >> "$OUTPUT_FILE"
 
     echo "Iteration $i complete. Results saved to $OUTPUT_FILE"
-    
+
     # Wait before next run (except after the last one)
     if [ $i -lt $runs ]; then
         sleep $DELAY
