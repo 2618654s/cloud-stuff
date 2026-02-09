@@ -40,11 +40,27 @@ run_test() {
     # Wall-clock timestamp (UTC, ISO-8601)
     TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
-    EXT_TIME=$({ time $EXECUTABLE $START $END > $TEMP_OUT; } 2>&1)
-    INNER_CSV=$(cat $TEMP_OUT)
+    # We use a temporary file for stderr to separate time from program errors
+    local TIME_OUT="/tmp/forksum_time.txt"
 
-    echo "$TIMESTAMP,$TYPE,$INNER_CSV,$EXT_TIME" >> $OUTPUT_FILE
-    echo -n "."
+    # Execute inside a block to capture 'time' output
+    { time $EXECUTABLE $START $END > $TEMP_OUT; } 2> $TIME_OUT
+
+    # Check if the C program actually succeeded (Exit code 0)
+    if [ $? -eq 0 ]; then
+        INNER_CSV=$(cat $TEMP_OUT)
+        EXT_TIME=$(cat $TIME_OUT)
+
+        # Write to CSV only on success
+        echo "$TIMESTAMP,$TYPE,$INNER_CSV,$EXT_TIME" >> $OUTPUT_FILE
+        echo -n "."
+    else
+        echo -e "\n[Error] Test failed for $TYPE ($START-$END). Check system limits."
+        cat $TIME_OUT # Likely contains the perror message
+    fi
+
+    # Clean up temp time file
+    rm -f $TIME_OUT
 }
 
 
