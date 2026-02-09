@@ -25,8 +25,10 @@ TIMEFORMAT="%R"
 
 # 3. Initialize CSV file with NEW headers
 # We are adding 'external_time_sec' and 'overhead_sec' to the end.
-echo "timestamp,test_type,start,end,sum,forks,internal_time_sec,internal_fps,external_time_sec" > $OUTPUT_FILE
-
+# 3. Initialize CSV file ONLY if it doesn't exist
+if [ ! -f "$OUTPUT_FILE" ]; then
+    echo "timestamp,test_type,start,end,sum,forks,internal_time_sec,internal_fps,external_time_sec" > "$OUTPUT_FILE"
+fi
 echo "Starting benchmark with Linux 'time' integration..."
 echo "Results will be saved to $OUTPUT_FILE"
 
