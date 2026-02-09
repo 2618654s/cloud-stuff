@@ -1,0 +1,31 @@
+# Step 1: Build wrk
+FROM alpine:3.18 AS builder
+RUN apk add --no-cache build-base git openssl-dev zlib-dev
+RUN git clone https://github.com/wg/wrk.git /wrk && \
+    cd /wrk && make
+
+# Step 2: Final Benchmarking Image
+FROM alpine:3.18
+RUN apk add --no-cache \
+    bash \
+    curl \
+    nginx \
+    python3 \
+    coreutils \
+    grep \
+    sed \
+    gawk
+
+# Copy wrk from builder
+COPY --from=builder /wrk/wrk /usr/local/bin/
+
+# Set up workspace
+WORKDIR /app
+COPY benchmark.sh .
+RUN chmod +x benchmark.sh
+
+# Create log directory
+RUN mkdir -p benchmark_logs
+
+# Entry point
+ENTRYPOINT ["/bin/bash", "./benchmark.sh"]

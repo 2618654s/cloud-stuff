@@ -1,0 +1,2 @@
+timestamp,test_iteration,benchmark_type,param_config,load_avg_1min,free_ram_mb,result_value,result_unit
+2026-02-09T05:40:31Z,1,cpu,prime=5000_threads=1,0.47,7451,20809.27,events/sec

@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # The Target Server
+  nginx-target:
+    image: nginx:latest
+    container_name: nginx_benchmark_target
+    ports:
+      - "81:81"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    restart: unless-stopped
+
+
+    # The Benchmark Suite
+  benchmark-runner:
+    build:
+      context: .
+      dockerfile: benchmark.Dockerfile
+    container_name: benchmark_suite
+    privileged: true
+    network_mode: "host"
+    volumes:
+      - ./benchmark_logs:/benchmarks/benchmark_logs
+      - /var/run/docker.sock:/var/run/docker.sock # Optional: if you need to talk to Docker
+    depends_on:
+      - nginx-target
+    environment:
+      - TARGET_URL=http://localhost:81
+    restart: "no"

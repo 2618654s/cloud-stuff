@@ -1,0 +1,11 @@
+timestamp,test_iteration,test_type,target,protocol,config,result_value,result_unit
+2026-02-09T05:38:54Z,1,ping_min,Google DNS,icmp,default, 15.444,ms
+2026-02-09T05:38:54Z,1,ping_avg,Google DNS,icmp,default,29.300,ms
+2026-02-09T05:38:54Z,1,ping_max,Google DNS,icmp,default,96.279,ms
+2026-02-09T05:38:54Z,1,ping_stddev,Google DNS,icmp,default,26.766,ms
+2026-02-09T05:38:54Z,1,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-09T05:38:58Z,2,ping_min,Google DNS,icmp,default, 15.130,ms
+2026-02-09T05:38:58Z,2,ping_avg,Google DNS,icmp,default,29.482,ms
+2026-02-09T05:38:58Z,2,ping_max,Google DNS,icmp,default,100.768,ms
+2026-02-09T05:38:58Z,2,ping_stddev,Google DNS,icmp,default,27.872,ms
+2026-02-09T05:38:58Z,2,ping_loss,Google DNS,icmp,default,0,percent

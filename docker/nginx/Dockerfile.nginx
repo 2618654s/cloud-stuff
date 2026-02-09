@@ -1,0 +1,4 @@
+FROM nginx:alpine
+# Add a custom index.html for a consistent payload size
+RUN echo "<html><body><h1>Benchmark Target</h1><p>Static content test.</p></body></html>" > /usr/share/nginx/html/index.html
+EXPOSE 80
