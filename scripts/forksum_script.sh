@@ -2,8 +2,8 @@
 
 # Configuration
 OUTPUT_FILE="benchmark_logs/benchmark_results_with_time.csv"
-EXECUTABLE="./forksum"
-SOURCE="forksum.c"
+EXECUTABLE="/home/samsaju/cloud-stuff/scripts/forksum"
+SOURCE="/home/samsaju/cloud-stuff/scripts/forksum.c"
 TEMP_OUT="/tmp/forksum_stdout.txt"
 
 # 1. Compile (Only if needed)
@@ -19,7 +19,7 @@ else
 fi
 
 # 2. Configure 'time' format
-# %R = Elapsed time in seconds. 
+# %R = Elapsed time in seconds.
 # We use the bash builtin 'time', not /usr/bin/time, for easier formatting.
 TIMEFORMAT="%R"
 
@@ -50,7 +50,7 @@ run_test() {
 
 # --- CONFIG 1: BASELINE (Small Request) ---
 echo "Running Config 1: Baseline (Small Load)..."
-for i in {1..10}; do
+for i in {1..2}; do
     run_test "Baseline" 1 1000
 done
 echo " Done."
@@ -70,7 +70,7 @@ done
 echo " Done."
 
 # --- CONFIG : CONCURRENCY STRESS ---
-# Note: 'time' is tricky with background processes (&). 
+# Note: 'time' is tricky with background processes (&).
 # We wrap the whole parallel block to measure the TOTAL time for the batch.
 echo "Running Config 4: Concurrent Execution (2x Parallel)..."
 

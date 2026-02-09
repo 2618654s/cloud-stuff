@@ -42,7 +42,8 @@ sudo apt-get install -y \
   docker-ce-cli \
   containerd.io \
   docker-buildx-plugin \
-  docker-compose-plugin
+  docker-compose-plugin \
+  jq
 
 # Install wrk
 cd /tmp
