@@ -18,8 +18,8 @@ echo "STARTING INTERFERENCE TEST SUITE - $(date)" | tee -a $RESULT_FILE
 echo "========================================================" | tee -a $RESULT_FILE
 
 run_all_benchmarks() {
-    # echo "   -> Running $BENCHMARK_SCRIPT..." | tee -a $RESULT_FILE
-    # $BENCHMARK_SCRIPT
+    echo "   -> Running $BENCHMARK_SCRIPT..." | tee -a $RESULT_FILE
+    $BENCHMARK_SCRIPT
     echo "   -> Running $BENCHMARK_SCRIPT_2..." | tee -a $RESULT_FILE
     $BENCHMARK_SCRIPT_2
 }
