@@ -36,17 +36,17 @@ import sys, json
 try:
     data = json.load(sys.stdin)
     job = data['jobs'][0]
-    
+
     # Determine if Read or Write
     if 'read' in job['job options']['rw'] or 'randread' in job['job options']['rw']:
         metrics = job['read']
     else:
         metrics = job['write']
-        
+
     # Extract Metrics
     iops = metrics['iops']
     bw = metrics['bw'] / 1024  # KB to MiB
-    
+
     # Latency is usually in 'clat_ns' (Completion Latency in nanoseconds)
     # We convert to milliseconds (ms) by dividing by 1,000,000
     lat_node = metrics['clat_ns']
@@ -54,11 +54,11 @@ try:
     min_l = lat_node['min'] / 1e6
     max_l = lat_node['max'] / 1e6
     stddev = lat_node['stddev'] / 1e6
-    
+
     # 95th Percentile (Handling dictionary structure)
     # FIO returns percentiles as a dict: {'95.000000': 1234, ...}
     p95 = lat_node['percentile'].get('95.000000', 0) / 1e6
-    
+
     print(f'{iops},{bw:.2f},{mean:.2f},{min_l:.2f},{max_l:.2f},{stddev:.2f},{p95:.2f}')
 
 except Exception as e:
@@ -79,7 +79,7 @@ run_test() {
 
     # Get current UTC timestamp
     local TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-    
+
     # Run FIO and pipe JSON output to Python parser
     fio --name=$NAME \
         --ioengine=libaio --rw=$RW --bs=$BS \
@@ -89,10 +89,10 @@ run_test() {
 
     # Parse the temp file
     CSV_DATA=$(cat temp_fio.json | parse_json)
-    
+
     # Save to file with timestamp
     echo "$TIMESTAMP,$ITER,$NAME,$CSV_DATA" >> "$RESULT_CSV"
-    
+
     rm -f $TEST_FILE temp_fio.json
     sleep 2
 }
