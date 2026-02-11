@@ -19,6 +19,7 @@ PING_TARGET_NAMES=("Google DNS" "Cloudflare DNS" "Internal Server")
 IPERF_DURATIONS=(5)  # seconds
 IPERF_PARALLEL_STREAMS=(1)  # number of parallel streams
 IPERF_PROTOCOLS=("tcp" "udp")
+MAX_RETRIES=3  # Retry up to 3 times (4 total attempts)
 
 mkdir -p "$LOG_DIR"
 
@@ -85,34 +86,58 @@ if [ -n "$IPERF_BIN" ]; then
                 echo "  Protocol: $protocol, Config: $CONFIG"
 
                 for iter in $(seq 1 $ITERATIONS); do
+                    
+                    # Retry logic variables
+                    attempt=0
+                    success=false
+                    
                     # Build iperf3 command
                     IPERF_CMD="$IPERF_BIN -c $IPERF_SERVER -p $IPERF_PORT -t $duration -P $parallel -f m"
-
                     if [ "$protocol" = "udp" ]; then
                         IPERF_CMD="$IPERF_CMD -u -b 1000M"  # UDP with 1Gbps target
                     fi
 
-                    # Run test
-                    IPERF_OUTPUT=$($IPERF_CMD 2>&1)
-
-                    if [ $? -eq 0 ]; then
-                        # Extract sender bandwidth
-                        BANDWIDTH=$(echo "$IPERF_OUTPUT" | grep "sender" | tail -1 | awk '{print $7}')
-
-                        # For UDP, also get jitter and packet loss
-                        if [ "$protocol" = "udp" ]; then
-                            JITTER=$(echo "$IPERF_OUTPUT" | grep "sender" | tail -1 | awk '{print $9}')
-                            LOSS=$(echo "$IPERF_OUTPUT" | grep "sender" | tail -1 | awk '{print $12}' | tr -d '()%')
-
-                            echo "$TIMESTAMP,$iter,iperf_bw,$IPERF_SERVER,$protocol,$CONFIG,$BANDWIDTH,Mbps" >> "$LOG_FILE"
-                            echo "$TIMESTAMP,$iter,iperf_jitter,$IPERF_SERVER,$protocol,$CONFIG,$JITTER,ms" >> "$LOG_FILE"
-                            echo "$TIMESTAMP,$iter,iperf_loss,$IPERF_SERVER,$protocol,$CONFIG,$LOSS,percent" >> "$LOG_FILE"
-                        else
-                            echo "$TIMESTAMP,$iter,iperf_bw,$IPERF_SERVER,$protocol,$CONFIG,$BANDWIDTH,Mbps" >> "$LOG_FILE"
+                    # Retry Loop
+                    while [ $attempt -le $MAX_RETRIES ]; do
+                        if [ $attempt -gt 0 ]; then
+                            echo "    ...Retry #$attempt for iteration $iter..."
                         fi
-                    else
-                        echo "    iPerf3 test failed"
-                        echo "$TIMESTAMP,$iter,iperf_failed,$IPERF_SERVER,$protocol,$CONFIG,0,Mbps" >> "$LOG_FILE"
+
+                        # Run test
+                        IPERF_OUTPUT=$($IPERF_CMD 2>&1)
+                        cmd_status=$?
+
+                        if [ $cmd_status -eq 0 ]; then
+                            success=true
+                            # Extract sender bandwidth
+                            BANDWIDTH=$(echo "$IPERF_OUTPUT" | grep "sender" | tail -1 | awk '{print $7}')
+
+                            # For UDP, also get jitter and packet loss
+                            if [ "$protocol" = "udp" ]; then
+                                JITTER=$(echo "$IPERF_OUTPUT" | grep "sender" | tail -1 | awk '{print $9}')
+                                LOSS=$(echo "$IPERF_OUTPUT" | grep "sender" | tail -1 | awk '{print $12}' | tr -d '()%')
+
+                                echo "$TIMESTAMP,$iter,iperf_bw,$IPERF_SERVER,$protocol,$CONFIG,$BANDWIDTH,Mbps" >> "$LOG_FILE"
+                                echo "$TIMESTAMP,$iter,iperf_jitter,$IPERF_SERVER,$protocol,$CONFIG,$JITTER,ms" >> "$LOG_FILE"
+                                echo "$TIMESTAMP,$iter,iperf_loss,$IPERF_SERVER,$protocol,$CONFIG,$LOSS,percent" >> "$LOG_FILE"
+                            else
+                                echo "$TIMESTAMP,$iter,iperf_bw,$IPERF_SERVER,$protocol,$CONFIG,$BANDWIDTH,Mbps" >> "$LOG_FILE"
+                            fi
+                            
+                            # Break the retry loop on success
+                            break
+                        else
+                            ((attempt++))
+                            if [ $attempt -le $MAX_RETRIES ]; then
+                                sleep 1
+                            fi
+                        fi
+                    done
+
+                    # If we exhausted retries without success
+                    if [ "$success" = false ]; then
+                        echo "    iPerf3 test failed for iteration $iter (Max retries reached). Skipping log."
+                        # Explicitly NOT logging to CSV here as requested
                     fi
 
                     sleep 3
