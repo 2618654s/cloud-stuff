@@ -75,16 +75,8 @@ echo "Starting benchmark sequence..."
 echo "=============================="
 echo ""
 
-run_benchmark "/benchmarks/scripts/stress_ng-docker.sh" "Stress-NG (System Stress)"
-#
-# run_benchmark "sysbench.sh" "Sysbench (CPU/Memory/Disk)"
-
-run_benchmark "/benchmarks/scripts/qperf.sh" "QPERF (Network Performance)"
-run_benchmark "/benchmarks/scripts/speedtest.sh" "Speedtest (Internet Speed)"
-run_benchmark "/benchmarks/scripts/network.sh" "Network Tests (Ping/iPerf)"
-
-# run_benchmark "fio.sh" "FIO (Advanced Disk I/O)"
-
+run_benchmark "sysbench.sh" "Sysbench (CPU/Memory/Disk)"
+run_benchmark "fio_fast.sh" "FIO (Advanced Disk I/O)"
 run_benchmark "/benchmarks/scripts/nginx-docker.sh" "Nginx"
 run_benchmark "/benchmarks/scripts/forksum_script_docker.sh" "Forksum"
 
