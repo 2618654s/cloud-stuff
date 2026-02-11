@@ -1,0 +1,357 @@
+timestamp,test_iteration,test_type,target,protocol,config,result_value,result_unit
+2026-02-10T21:00:01Z,1,ping_min,Google DNS,icmp,default, 0.268,ms
+2026-02-10T21:00:01Z,1,ping_avg,Google DNS,icmp,default,0.340,ms
+2026-02-10T21:00:01Z,1,ping_max,Google DNS,icmp,default,0.559,ms
+2026-02-10T21:00:01Z,1,ping_stddev,Google DNS,icmp,default,0.081,ms
+2026-02-10T21:00:01Z,1,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-10T21:00:05Z,2,ping_min,Google DNS,icmp,default, 0.252,ms
+2026-02-10T21:00:05Z,2,ping_avg,Google DNS,icmp,default,0.316,ms
+2026-02-10T21:00:05Z,2,ping_max,Google DNS,icmp,default,0.458,ms
+2026-02-10T21:00:05Z,2,ping_stddev,Google DNS,icmp,default,0.067,ms
+2026-02-10T21:00:05Z,2,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-10T21:00:09Z,3,ping_min,Google DNS,icmp,default, 0.252,ms
+2026-02-10T21:00:09Z,3,ping_avg,Google DNS,icmp,default,0.321,ms
+2026-02-10T21:00:09Z,3,ping_max,Google DNS,icmp,default,0.373,ms
+2026-02-10T21:00:09Z,3,ping_stddev,Google DNS,icmp,default,0.038,ms
+2026-02-10T21:00:09Z,3,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-10T21:00:13Z,4,ping_min,Google DNS,icmp,default, 0.252,ms
+2026-02-10T21:00:13Z,4,ping_avg,Google DNS,icmp,default,0.291,ms
+2026-02-10T21:00:13Z,4,ping_max,Google DNS,icmp,default,0.316,ms
+2026-02-10T21:00:13Z,4,ping_stddev,Google DNS,icmp,default,0.020,ms
+2026-02-10T21:00:13Z,4,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-10T21:00:16Z,5,ping_min,Google DNS,icmp,default, 0.282,ms
+2026-02-10T21:00:16Z,5,ping_avg,Google DNS,icmp,default,0.309,ms
+2026-02-10T21:00:16Z,5,ping_max,Google DNS,icmp,default,0.391,ms
+2026-02-10T21:00:16Z,5,ping_stddev,Google DNS,icmp,default,0.031,ms
+2026-02-10T21:00:16Z,5,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-10T21:00:20Z,1,ping_min,Cloudflare DNS,icmp,default, 11.684,ms
+2026-02-10T21:00:20Z,1,ping_avg,Cloudflare DNS,icmp,default,11.817,ms
+2026-02-10T21:00:20Z,1,ping_max,Cloudflare DNS,icmp,default,12.065,ms
+2026-02-10T21:00:20Z,1,ping_stddev,Cloudflare DNS,icmp,default,0.120,ms
+2026-02-10T21:00:20Z,1,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-10T21:00:24Z,2,ping_min,Cloudflare DNS,icmp,default, 11.860,ms
+2026-02-10T21:00:24Z,2,ping_avg,Cloudflare DNS,icmp,default,11.924,ms
+2026-02-10T21:00:24Z,2,ping_max,Cloudflare DNS,icmp,default,12.043,ms
+2026-02-10T21:00:24Z,2,ping_stddev,Cloudflare DNS,icmp,default,0.055,ms
+2026-02-10T21:00:24Z,2,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-10T21:00:28Z,3,ping_min,Cloudflare DNS,icmp,default, 11.580,ms
+2026-02-10T21:00:28Z,3,ping_avg,Cloudflare DNS,icmp,default,11.644,ms
+2026-02-10T21:00:28Z,3,ping_max,Cloudflare DNS,icmp,default,11.707,ms
+2026-02-10T21:00:28Z,3,ping_stddev,Cloudflare DNS,icmp,default,0.043,ms
+2026-02-10T21:00:28Z,3,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-10T21:00:32Z,4,ping_min,Cloudflare DNS,icmp,default, 11.822,ms
+2026-02-10T21:00:32Z,4,ping_avg,Cloudflare DNS,icmp,default,11.881,ms
+2026-02-10T21:00:32Z,4,ping_max,Cloudflare DNS,icmp,default,12.002,ms
+2026-02-10T21:00:32Z,4,ping_stddev,Cloudflare DNS,icmp,default,0.050,ms
+2026-02-10T21:00:32Z,4,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-10T21:00:36Z,5,ping_min,Cloudflare DNS,icmp,default, 11.734,ms
+2026-02-10T21:00:36Z,5,ping_avg,Cloudflare DNS,icmp,default,11.830,ms
+2026-02-10T21:00:36Z,5,ping_max,Cloudflare DNS,icmp,default,12.006,ms
+2026-02-10T21:00:36Z,5,ping_stddev,Cloudflare DNS,icmp,default,0.069,ms
+2026-02-10T21:00:36Z,5,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-10T21:00:39Z,1,ping_min,Internal Server,icmp,default, 0.897,ms
+2026-02-10T21:00:39Z,1,ping_avg,Internal Server,icmp,default,1.092,ms
+2026-02-10T21:00:39Z,1,ping_max,Internal Server,icmp,default,2.359,ms
+2026-02-10T21:00:39Z,1,ping_stddev,Internal Server,icmp,default,0.424,ms
+2026-02-10T21:00:39Z,1,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-10T21:00:43Z,2,ping_min,Internal Server,icmp,default, 0.909,ms
+2026-02-10T21:00:43Z,2,ping_avg,Internal Server,icmp,default,0.974,ms
+2026-02-10T21:00:43Z,2,ping_max,Internal Server,icmp,default,1.051,ms
+2026-02-10T21:00:43Z,2,ping_stddev,Internal Server,icmp,default,0.051,ms
+2026-02-10T21:00:43Z,2,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-10T21:00:47Z,3,ping_min,Internal Server,icmp,default, 0.937,ms
+2026-02-10T21:00:47Z,3,ping_avg,Internal Server,icmp,default,0.982,ms
+2026-02-10T21:00:47Z,3,ping_max,Internal Server,icmp,default,1.043,ms
+2026-02-10T21:00:47Z,3,ping_stddev,Internal Server,icmp,default,0.034,ms
+2026-02-10T21:00:47Z,3,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-10T21:00:51Z,4,ping_min,Internal Server,icmp,default, 0.886,ms
+2026-02-10T21:00:51Z,4,ping_avg,Internal Server,icmp,default,0.951,ms
+2026-02-10T21:00:51Z,4,ping_max,Internal Server,icmp,default,1.020,ms
+2026-02-10T21:00:51Z,4,ping_stddev,Internal Server,icmp,default,0.045,ms
+2026-02-10T21:00:51Z,4,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-10T21:00:55Z,5,ping_min,Internal Server,icmp,default, 0.914,ms
+2026-02-10T21:00:55Z,5,ping_avg,Internal Server,icmp,default,0.975,ms
+2026-02-10T21:00:55Z,5,ping_max,Internal Server,icmp,default,1.048,ms
+2026-02-10T21:00:55Z,5,ping_stddev,Internal Server,icmp,default,0.048,ms
+2026-02-10T21:00:55Z,5,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-10T21:00:59Z,1,iperf_bw,10.128.0.10,tcp,duration=5s_parallel=1,8927,Mbps
+2026-02-10T21:00:59Z,2,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-10T21:00:59Z,3,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-10T21:00:59Z,4,iperf_bw,10.128.0.10,tcp,duration=5s_parallel=1,9523,Mbps
+2026-02-10T21:00:59Z,5,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-10T21:01:24Z,1,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
+2026-02-10T21:01:24Z,2,iperf_bw,10.128.0.10,udp,duration=5s_parallel=1,1000,Mbps
+2026-02-10T21:01:24Z,2,iperf_jitter,10.128.0.10,udp,duration=5s_parallel=1,0.000,ms
+2026-02-10T21:01:24Z,2,iperf_loss,10.128.0.10,udp,duration=5s_parallel=1,0,percent
+2026-02-10T21:01:24Z,3,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
+2026-02-10T21:01:24Z,4,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
+2026-02-10T21:01:24Z,5,iperf_bw,10.128.0.10,udp,duration=5s_parallel=1,1000,Mbps
+2026-02-10T21:01:24Z,5,iperf_jitter,10.128.0.10,udp,duration=5s_parallel=1,0.000,ms
+2026-02-10T21:01:24Z,5,iperf_loss,10.128.0.10,udp,duration=5s_parallel=1,0,percent
+2026-02-11T00:00:01Z,1,ping_min,Google DNS,icmp,default, 0.258,ms
+2026-02-11T00:00:01Z,1,ping_avg,Google DNS,icmp,default,0.327,ms
+2026-02-11T00:00:01Z,1,ping_max,Google DNS,icmp,default,0.517,ms
+2026-02-11T00:00:01Z,1,ping_stddev,Google DNS,icmp,default,0.071,ms
+2026-02-11T00:00:01Z,1,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T00:00:05Z,2,ping_min,Google DNS,icmp,default, 0.248,ms
+2026-02-11T00:00:05Z,2,ping_avg,Google DNS,icmp,default,0.309,ms
+2026-02-11T00:00:05Z,2,ping_max,Google DNS,icmp,default,0.391,ms
+2026-02-11T00:00:05Z,2,ping_stddev,Google DNS,icmp,default,0.044,ms
+2026-02-11T00:00:05Z,2,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T00:00:09Z,3,ping_min,Google DNS,icmp,default, 0.259,ms
+2026-02-11T00:00:09Z,3,ping_avg,Google DNS,icmp,default,0.297,ms
+2026-02-11T00:00:09Z,3,ping_max,Google DNS,icmp,default,0.326,ms
+2026-02-11T00:00:09Z,3,ping_stddev,Google DNS,icmp,default,0.022,ms
+2026-02-11T00:00:09Z,3,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T00:00:12Z,4,ping_min,Google DNS,icmp,default, 0.257,ms
+2026-02-11T00:00:12Z,4,ping_avg,Google DNS,icmp,default,0.307,ms
+2026-02-11T00:00:12Z,4,ping_max,Google DNS,icmp,default,0.343,ms
+2026-02-11T00:00:12Z,4,ping_stddev,Google DNS,icmp,default,0.026,ms
+2026-02-11T00:00:12Z,4,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T00:00:16Z,5,ping_min,Google DNS,icmp,default, 0.286,ms
+2026-02-11T00:00:16Z,5,ping_avg,Google DNS,icmp,default,0.330,ms
+2026-02-11T00:00:16Z,5,ping_max,Google DNS,icmp,default,0.445,ms
+2026-02-11T00:00:16Z,5,ping_stddev,Google DNS,icmp,default,0.045,ms
+2026-02-11T00:00:16Z,5,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T00:00:20Z,1,ping_min,Cloudflare DNS,icmp,default, 11.831,ms
+2026-02-11T00:00:20Z,1,ping_avg,Cloudflare DNS,icmp,default,11.935,ms
+2026-02-11T00:00:20Z,1,ping_max,Cloudflare DNS,icmp,default,12.225,ms
+2026-02-11T00:00:20Z,1,ping_stddev,Cloudflare DNS,icmp,default,0.119,ms
+2026-02-11T00:00:20Z,1,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T00:00:24Z,2,ping_min,Cloudflare DNS,icmp,default, 11.744,ms
+2026-02-11T00:00:24Z,2,ping_avg,Cloudflare DNS,icmp,default,11.819,ms
+2026-02-11T00:00:24Z,2,ping_max,Cloudflare DNS,icmp,default,11.982,ms
+2026-02-11T00:00:24Z,2,ping_stddev,Cloudflare DNS,icmp,default,0.089,ms
+2026-02-11T00:00:24Z,2,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T00:00:28Z,3,ping_min,Cloudflare DNS,icmp,default, 11.792,ms
+2026-02-11T00:00:28Z,3,ping_avg,Cloudflare DNS,icmp,default,11.841,ms
+2026-02-11T00:00:28Z,3,ping_max,Cloudflare DNS,icmp,default,11.933,ms
+2026-02-11T00:00:28Z,3,ping_stddev,Cloudflare DNS,icmp,default,0.046,ms
+2026-02-11T00:00:28Z,3,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T00:00:32Z,4,ping_min,Cloudflare DNS,icmp,default, 11.943,ms
+2026-02-11T00:00:32Z,4,ping_avg,Cloudflare DNS,icmp,default,11.997,ms
+2026-02-11T00:00:32Z,4,ping_max,Cloudflare DNS,icmp,default,12.050,ms
+2026-02-11T00:00:32Z,4,ping_stddev,Cloudflare DNS,icmp,default,0.034,ms
+2026-02-11T00:00:32Z,4,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T00:00:35Z,5,ping_min,Cloudflare DNS,icmp,default, 11.927,ms
+2026-02-11T00:00:35Z,5,ping_avg,Cloudflare DNS,icmp,default,11.974,ms
+2026-02-11T00:00:35Z,5,ping_max,Cloudflare DNS,icmp,default,12.057,ms
+2026-02-11T00:00:35Z,5,ping_stddev,Cloudflare DNS,icmp,default,0.043,ms
+2026-02-11T00:00:35Z,5,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T00:00:39Z,1,ping_min,Internal Server,icmp,default, 0.927,ms
+2026-02-11T00:00:39Z,1,ping_avg,Internal Server,icmp,default,1.174,ms
+2026-02-11T00:00:39Z,1,ping_max,Internal Server,icmp,default,2.752,ms
+2026-02-11T00:00:39Z,1,ping_stddev,Internal Server,icmp,default,0.529,ms
+2026-02-11T00:00:39Z,1,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T00:00:43Z,2,ping_min,Internal Server,icmp,default, 0.933,ms
+2026-02-11T00:00:43Z,2,ping_avg,Internal Server,icmp,default,0.993,ms
+2026-02-11T00:00:43Z,2,ping_max,Internal Server,icmp,default,1.136,ms
+2026-02-11T00:00:43Z,2,ping_stddev,Internal Server,icmp,default,0.057,ms
+2026-02-11T00:00:43Z,2,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T00:00:47Z,3,ping_min,Internal Server,icmp,default, 0.902,ms
+2026-02-11T00:00:47Z,3,ping_avg,Internal Server,icmp,default,0.945,ms
+2026-02-11T00:00:47Z,3,ping_max,Internal Server,icmp,default,1.011,ms
+2026-02-11T00:00:47Z,3,ping_stddev,Internal Server,icmp,default,0.030,ms
+2026-02-11T00:00:47Z,3,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T00:00:51Z,4,ping_min,Internal Server,icmp,default, 0.906,ms
+2026-02-11T00:00:51Z,4,ping_avg,Internal Server,icmp,default,0.977,ms
+2026-02-11T00:00:51Z,4,ping_max,Internal Server,icmp,default,1.069,ms
+2026-02-11T00:00:51Z,4,ping_stddev,Internal Server,icmp,default,0.048,ms
+2026-02-11T00:00:51Z,4,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T00:00:55Z,5,ping_min,Internal Server,icmp,default, 0.930,ms
+2026-02-11T00:00:55Z,5,ping_avg,Internal Server,icmp,default,0.995,ms
+2026-02-11T00:00:55Z,5,ping_max,Internal Server,icmp,default,1.093,ms
+2026-02-11T00:00:55Z,5,ping_stddev,Internal Server,icmp,default,0.053,ms
+2026-02-11T00:00:55Z,5,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T00:00:58Z,1,iperf_bw,10.128.0.10,tcp,duration=5s_parallel=1,9320,Mbps
+2026-02-11T00:00:58Z,2,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-11T00:00:58Z,3,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-11T00:00:58Z,4,iperf_bw,10.128.0.10,tcp,duration=5s_parallel=1,9393,Mbps
+2026-02-11T00:00:58Z,5,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-11T00:01:23Z,1,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
+2026-02-11T00:01:23Z,2,iperf_bw,10.128.0.10,udp,duration=5s_parallel=1,1000,Mbps
+2026-02-11T00:01:23Z,2,iperf_jitter,10.128.0.10,udp,duration=5s_parallel=1,0.000,ms
+2026-02-11T00:01:23Z,2,iperf_loss,10.128.0.10,udp,duration=5s_parallel=1,0,percent
+2026-02-11T00:01:23Z,3,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
+2026-02-11T00:01:23Z,4,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
+2026-02-11T00:01:23Z,5,iperf_bw,10.128.0.10,udp,duration=5s_parallel=1,1000,Mbps
+2026-02-11T00:01:23Z,5,iperf_jitter,10.128.0.10,udp,duration=5s_parallel=1,0.000,ms
+2026-02-11T00:01:23Z,5,iperf_loss,10.128.0.10,udp,duration=5s_parallel=1,0,percent
+2026-02-11T03:00:01Z,1,ping_min,Google DNS,icmp,default, 0.254,ms
+2026-02-11T03:00:01Z,1,ping_avg,Google DNS,icmp,default,0.343,ms
+2026-02-11T03:00:01Z,1,ping_max,Google DNS,icmp,default,0.699,ms
+2026-02-11T03:00:01Z,1,ping_stddev,Google DNS,icmp,default,0.127,ms
+2026-02-11T03:00:01Z,1,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T03:00:04Z,2,ping_min,Google DNS,icmp,default, 0.275,ms
+2026-02-11T03:00:04Z,2,ping_avg,Google DNS,icmp,default,0.323,ms
+2026-02-11T03:00:04Z,2,ping_max,Google DNS,icmp,default,0.388,ms
+2026-02-11T03:00:04Z,2,ping_stddev,Google DNS,icmp,default,0.036,ms
+2026-02-11T03:00:04Z,2,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T03:00:08Z,3,ping_min,Google DNS,icmp,default, 0.254,ms
+2026-02-11T03:00:08Z,3,ping_avg,Google DNS,icmp,default,0.312,ms
+2026-02-11T03:00:08Z,3,ping_max,Google DNS,icmp,default,0.381,ms
+2026-02-11T03:00:08Z,3,ping_stddev,Google DNS,icmp,default,0.032,ms
+2026-02-11T03:00:08Z,3,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T03:00:12Z,4,ping_min,Google DNS,icmp,default, 0.253,ms
+2026-02-11T03:00:12Z,4,ping_avg,Google DNS,icmp,default,0.293,ms
+2026-02-11T03:00:12Z,4,ping_max,Google DNS,icmp,default,0.365,ms
+2026-02-11T03:00:12Z,4,ping_stddev,Google DNS,icmp,default,0.031,ms
+2026-02-11T03:00:12Z,4,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T03:00:16Z,5,ping_min,Google DNS,icmp,default, 0.250,ms
+2026-02-11T03:00:16Z,5,ping_avg,Google DNS,icmp,default,0.298,ms
+2026-02-11T03:00:16Z,5,ping_max,Google DNS,icmp,default,0.445,ms
+2026-02-11T03:00:16Z,5,ping_stddev,Google DNS,icmp,default,0.051,ms
+2026-02-11T03:00:16Z,5,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T03:00:20Z,1,ping_min,Cloudflare DNS,icmp,default, 11.893,ms
+2026-02-11T03:00:20Z,1,ping_avg,Cloudflare DNS,icmp,default,11.965,ms
+2026-02-11T03:00:20Z,1,ping_max,Cloudflare DNS,icmp,default,12.216,ms
+2026-02-11T03:00:20Z,1,ping_stddev,Cloudflare DNS,icmp,default,0.093,ms
+2026-02-11T03:00:20Z,1,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T03:00:24Z,2,ping_min,Cloudflare DNS,icmp,default, 12.094,ms
+2026-02-11T03:00:24Z,2,ping_avg,Cloudflare DNS,icmp,default,12.241,ms
+2026-02-11T03:00:24Z,2,ping_max,Cloudflare DNS,icmp,default,12.324,ms
+2026-02-11T03:00:24Z,2,ping_stddev,Cloudflare DNS,icmp,default,0.069,ms
+2026-02-11T03:00:24Z,2,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T03:00:28Z,3,ping_min,Cloudflare DNS,icmp,default, 12.331,ms
+2026-02-11T03:00:28Z,3,ping_avg,Cloudflare DNS,icmp,default,12.385,ms
+2026-02-11T03:00:28Z,3,ping_max,Cloudflare DNS,icmp,default,12.512,ms
+2026-02-11T03:00:28Z,3,ping_stddev,Cloudflare DNS,icmp,default,0.054,ms
+2026-02-11T03:00:28Z,3,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T03:00:31Z,4,ping_min,Cloudflare DNS,icmp,default, 12.288,ms
+2026-02-11T03:00:31Z,4,ping_avg,Cloudflare DNS,icmp,default,12.438,ms
+2026-02-11T03:00:31Z,4,ping_max,Cloudflare DNS,icmp,default,13.186,ms
+2026-02-11T03:00:31Z,4,ping_stddev,Cloudflare DNS,icmp,default,0.252,ms
+2026-02-11T03:00:31Z,4,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T03:00:35Z,5,ping_min,Cloudflare DNS,icmp,default, 12.414,ms
+2026-02-11T03:00:35Z,5,ping_avg,Cloudflare DNS,icmp,default,12.457,ms
+2026-02-11T03:00:35Z,5,ping_max,Cloudflare DNS,icmp,default,12.529,ms
+2026-02-11T03:00:35Z,5,ping_stddev,Cloudflare DNS,icmp,default,0.034,ms
+2026-02-11T03:00:35Z,5,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T03:00:39Z,1,ping_min,Internal Server,icmp,default, 0.869,ms
+2026-02-11T03:00:39Z,1,ping_avg,Internal Server,icmp,default,1.035,ms
+2026-02-11T03:00:39Z,1,ping_max,Internal Server,icmp,default,1.919,ms
+2026-02-11T03:00:39Z,1,ping_stddev,Internal Server,icmp,default,0.303,ms
+2026-02-11T03:00:39Z,1,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T03:00:43Z,2,ping_min,Internal Server,icmp,default, 0.882,ms
+2026-02-11T03:00:43Z,2,ping_avg,Internal Server,icmp,default,0.926,ms
+2026-02-11T03:00:43Z,2,ping_max,Internal Server,icmp,default,0.963,ms
+2026-02-11T03:00:43Z,2,ping_stddev,Internal Server,icmp,default,0.028,ms
+2026-02-11T03:00:43Z,2,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T03:00:47Z,3,ping_min,Internal Server,icmp,default, 0.850,ms
+2026-02-11T03:00:47Z,3,ping_avg,Internal Server,icmp,default,0.893,ms
+2026-02-11T03:00:47Z,3,ping_max,Internal Server,icmp,default,0.969,ms
+2026-02-11T03:00:47Z,3,ping_stddev,Internal Server,icmp,default,0.035,ms
+2026-02-11T03:00:47Z,3,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T03:00:51Z,4,ping_min,Internal Server,icmp,default, 0.881,ms
+2026-02-11T03:00:51Z,4,ping_avg,Internal Server,icmp,default,0.974,ms
+2026-02-11T03:00:51Z,4,ping_max,Internal Server,icmp,default,1.040,ms
+2026-02-11T03:00:51Z,4,ping_stddev,Internal Server,icmp,default,0.045,ms
+2026-02-11T03:00:51Z,4,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T03:00:54Z,5,ping_min,Internal Server,icmp,default, 0.959,ms
+2026-02-11T03:00:54Z,5,ping_avg,Internal Server,icmp,default,1.022,ms
+2026-02-11T03:00:54Z,5,ping_max,Internal Server,icmp,default,1.066,ms
+2026-02-11T03:00:54Z,5,ping_stddev,Internal Server,icmp,default,0.033,ms
+2026-02-11T03:00:54Z,5,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T03:00:58Z,1,iperf_bw,10.128.0.10,tcp,duration=5s_parallel=1,9492,Mbps
+2026-02-11T03:00:58Z,2,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-11T03:00:58Z,3,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-11T03:00:58Z,4,iperf_bw,10.128.0.10,tcp,duration=5s_parallel=1,7860,Mbps
+2026-02-11T03:00:58Z,5,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-11T03:01:23Z,1,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
+2026-02-11T03:01:23Z,2,iperf_bw,10.128.0.10,udp,duration=5s_parallel=1,1000,Mbps
+2026-02-11T03:01:23Z,2,iperf_jitter,10.128.0.10,udp,duration=5s_parallel=1,0.000,ms
+2026-02-11T03:01:23Z,2,iperf_loss,10.128.0.10,udp,duration=5s_parallel=1,0,percent
+2026-02-11T03:01:23Z,3,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
+2026-02-11T03:01:23Z,4,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
+2026-02-11T03:01:23Z,5,iperf_bw,10.128.0.10,udp,duration=5s_parallel=1,1000,Mbps
+2026-02-11T03:01:23Z,5,iperf_jitter,10.128.0.10,udp,duration=5s_parallel=1,0.000,ms
+2026-02-11T03:01:23Z,5,iperf_loss,10.128.0.10,udp,duration=5s_parallel=1,0,percent
+2026-02-11T06:00:01Z,1,ping_min,Google DNS,icmp,default, 0.210,ms
+2026-02-11T06:00:01Z,1,ping_avg,Google DNS,icmp,default,0.271,ms
+2026-02-11T06:00:01Z,1,ping_max,Google DNS,icmp,default,0.376,ms
+2026-02-11T06:00:01Z,1,ping_stddev,Google DNS,icmp,default,0.041,ms
+2026-02-11T06:00:01Z,1,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T06:00:05Z,2,ping_min,Google DNS,icmp,default, 0.252,ms
+2026-02-11T06:00:05Z,2,ping_avg,Google DNS,icmp,default,0.304,ms
+2026-02-11T06:00:05Z,2,ping_max,Google DNS,icmp,default,0.383,ms
+2026-02-11T06:00:05Z,2,ping_stddev,Google DNS,icmp,default,0.034,ms
+2026-02-11T06:00:05Z,2,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T06:00:09Z,3,ping_min,Google DNS,icmp,default, 0.214,ms
+2026-02-11T06:00:09Z,3,ping_avg,Google DNS,icmp,default,0.261,ms
+2026-02-11T06:00:09Z,3,ping_max,Google DNS,icmp,default,0.329,ms
+2026-02-11T06:00:09Z,3,ping_stddev,Google DNS,icmp,default,0.031,ms
+2026-02-11T06:00:09Z,3,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T06:00:13Z,4,ping_min,Google DNS,icmp,default, 0.252,ms
+2026-02-11T06:00:13Z,4,ping_avg,Google DNS,icmp,default,0.302,ms
+2026-02-11T06:00:13Z,4,ping_max,Google DNS,icmp,default,0.379,ms
+2026-02-11T06:00:13Z,4,ping_stddev,Google DNS,icmp,default,0.038,ms
+2026-02-11T06:00:13Z,4,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T06:00:17Z,5,ping_min,Google DNS,icmp,default, 0.270,ms
+2026-02-11T06:00:17Z,5,ping_avg,Google DNS,icmp,default,0.303,ms
+2026-02-11T06:00:17Z,5,ping_max,Google DNS,icmp,default,0.431,ms
+2026-02-11T06:00:17Z,5,ping_stddev,Google DNS,icmp,default,0.046,ms
+2026-02-11T06:00:17Z,5,ping_loss,Google DNS,icmp,default,0,percent
+2026-02-11T06:00:21Z,1,ping_min,Cloudflare DNS,icmp,default, 12.031,ms
+2026-02-11T06:00:21Z,1,ping_avg,Cloudflare DNS,icmp,default,12.111,ms
+2026-02-11T06:00:21Z,1,ping_max,Cloudflare DNS,icmp,default,12.333,ms
+2026-02-11T06:00:21Z,1,ping_stddev,Cloudflare DNS,icmp,default,0.083,ms
+2026-02-11T06:00:21Z,1,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T06:00:25Z,2,ping_min,Cloudflare DNS,icmp,default, 11.848,ms
+2026-02-11T06:00:25Z,2,ping_avg,Cloudflare DNS,icmp,default,11.909,ms
+2026-02-11T06:00:25Z,2,ping_max,Cloudflare DNS,icmp,default,11.949,ms
+2026-02-11T06:00:25Z,2,ping_stddev,Cloudflare DNS,icmp,default,0.029,ms
+2026-02-11T06:00:25Z,2,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T06:00:28Z,3,ping_min,Cloudflare DNS,icmp,default, 12.270,ms
+2026-02-11T06:00:28Z,3,ping_avg,Cloudflare DNS,icmp,default,12.322,ms
+2026-02-11T06:00:28Z,3,ping_max,Cloudflare DNS,icmp,default,12.392,ms
+2026-02-11T06:00:28Z,3,ping_stddev,Cloudflare DNS,icmp,default,0.035,ms
+2026-02-11T06:00:28Z,3,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T06:00:32Z,4,ping_min,Cloudflare DNS,icmp,default, 12.212,ms
+2026-02-11T06:00:32Z,4,ping_avg,Cloudflare DNS,icmp,default,12.348,ms
+2026-02-11T06:00:32Z,4,ping_max,Cloudflare DNS,icmp,default,12.866,ms
+2026-02-11T06:00:32Z,4,ping_stddev,Cloudflare DNS,icmp,default,0.180,ms
+2026-02-11T06:00:32Z,4,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T06:00:36Z,5,ping_min,Cloudflare DNS,icmp,default, 11.938,ms
+2026-02-11T06:00:36Z,5,ping_avg,Cloudflare DNS,icmp,default,12.431,ms
+2026-02-11T06:00:36Z,5,ping_max,Cloudflare DNS,icmp,default,16.255,ms
+2026-02-11T06:00:36Z,5,ping_stddev,Cloudflare DNS,icmp,default,1.276,ms
+2026-02-11T06:00:36Z,5,ping_loss,Cloudflare DNS,icmp,default,0,percent
+2026-02-11T06:00:40Z,1,ping_min,Internal Server,icmp,default, 0.925,ms
+2026-02-11T06:00:40Z,1,ping_avg,Internal Server,icmp,default,1.101,ms
+2026-02-11T06:00:40Z,1,ping_max,Internal Server,icmp,default,2.292,ms
+2026-02-11T06:00:40Z,1,ping_stddev,Internal Server,icmp,default,0.397,ms
+2026-02-11T06:00:40Z,1,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T06:00:44Z,2,ping_min,Internal Server,icmp,default, 0.916,ms
+2026-02-11T06:00:44Z,2,ping_avg,Internal Server,icmp,default,0.946,ms
+2026-02-11T06:00:44Z,2,ping_max,Internal Server,icmp,default,1.067,ms
+2026-02-11T06:00:44Z,2,ping_stddev,Internal Server,icmp,default,0.041,ms
+2026-02-11T06:00:44Z,2,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T06:00:48Z,3,ping_min,Internal Server,icmp,default, 0.926,ms
+2026-02-11T06:00:48Z,3,ping_avg,Internal Server,icmp,default,0.948,ms
+2026-02-11T06:00:48Z,3,ping_max,Internal Server,icmp,default,0.976,ms
+2026-02-11T06:00:48Z,3,ping_stddev,Internal Server,icmp,default,0.015,ms
+2026-02-11T06:00:48Z,3,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T06:00:51Z,4,ping_min,Internal Server,icmp,default, 0.918,ms
+2026-02-11T06:00:51Z,4,ping_avg,Internal Server,icmp,default,0.974,ms
+2026-02-11T06:00:51Z,4,ping_max,Internal Server,icmp,default,1.013,ms
+2026-02-11T06:00:51Z,4,ping_stddev,Internal Server,icmp,default,0.026,ms
+2026-02-11T06:00:51Z,4,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T06:00:55Z,5,ping_min,Internal Server,icmp,default, 0.931,ms
+2026-02-11T06:00:55Z,5,ping_avg,Internal Server,icmp,default,0.972,ms
+2026-02-11T06:00:55Z,5,ping_max,Internal Server,icmp,default,1.066,ms
+2026-02-11T06:00:55Z,5,ping_stddev,Internal Server,icmp,default,0.038,ms
+2026-02-11T06:00:55Z,5,ping_loss,Internal Server,icmp,default,0,percent
+2026-02-11T06:00:59Z,1,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-11T06:00:59Z,2,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-11T06:00:59Z,3,iperf_bw,10.128.0.10,tcp,duration=5s_parallel=1,9376,Mbps
+2026-02-11T06:00:59Z,4,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-11T06:00:59Z,5,iperf_failed,10.128.0.10,tcp,duration=5s_parallel=1,0,Mbps
+2026-02-11T06:01:19Z,1,iperf_bw,10.128.0.10,udp,duration=5s_parallel=1,1000,Mbps
+2026-02-11T06:01:19Z,1,iperf_jitter,10.128.0.10,udp,duration=5s_parallel=1,0.000,ms
+2026-02-11T06:01:19Z,1,iperf_loss,10.128.0.10,udp,duration=5s_parallel=1,0,percent
+2026-02-11T06:01:19Z,2,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
+2026-02-11T06:01:19Z,3,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
+2026-02-11T06:01:19Z,4,iperf_bw,10.128.0.10,udp,duration=5s_parallel=1,1000,Mbps
+2026-02-11T06:01:19Z,4,iperf_jitter,10.128.0.10,udp,duration=5s_parallel=1,0.000,ms
+2026-02-11T06:01:19Z,4,iperf_loss,10.128.0.10,udp,duration=5s_parallel=1,0,percent
+2026-02-11T06:01:19Z,5,iperf_failed,10.128.0.10,udp,duration=5s_parallel=1,0,Mbps
