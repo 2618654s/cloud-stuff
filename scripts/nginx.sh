@@ -19,7 +19,7 @@ MANUAL_TARGET_URL="http://localhost:8080"
 
 # Test configurations (threads, connections, duration)
 THREAD_COUNTS=(1)
-CONNECTION_COUNTS=(10)
+CONNECTION_COUNTS=(10 50 100)
 DURATION="10s"  # Duration of each test
 
 mkdir -p "$LOG_DIR"
