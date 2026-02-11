@@ -10,10 +10,10 @@ ITERATIONS=5
 
 # Configuration
 # In Docker Compose, the Nginx container is reachable via its service name or localhost (if net=host)
-TARGET_URL=${TARGET_URL:-"http://localhost:80"}
+TARGET_URL=${TARGET_URL:-"http://localhost:81"}
 
 # Test configurations
-THREAD_COUNTS=(1 2 4)
+THREAD_COUNTS=(1)
 CONNECTION_COUNTS=(10 50 100)
 DURATION="10s"
 

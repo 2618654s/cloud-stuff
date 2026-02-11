@@ -75,8 +75,8 @@ echo "Starting benchmark sequence..."
 echo "=============================="
 echo ""
 
-run_benchmark "sysbench.sh" "Sysbench (CPU/Memory/Disk)"
-run_benchmark "fio_fast.sh" "FIO (Advanced Disk I/O)"
+run_benchmark "/benchmarks/scripts/sysbench.sh" "Sysbench (CPU/Memory/Disk)"
+run_benchmark "/benchmarks/scripts/fio_fast.sh" "FIO (Advanced Disk I/O)"
 run_benchmark "/benchmarks/scripts/nginx-docker.sh" "Nginx"
 run_benchmark "/benchmarks/scripts/forksum_script_docker.sh" "Forksum"
 
